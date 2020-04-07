@@ -14,4 +14,4 @@ class AllSignatoriesSpider(scrapy.Spider):
 
     def details(self, response):
         parser = Parser(response)
-        yield parser.parse_details()
+        return parser.parse_details()

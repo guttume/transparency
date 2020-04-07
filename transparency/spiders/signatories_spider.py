@@ -22,7 +22,7 @@ class SignatoriesSpider(scrapy.Spider):
 
     def signatory_details(self, response):
         parser = Parser(response)
-        yield parser.parse_details()
+        return parser.parse_details()
 
     def load_required_companies(self):
         with open('companies.txt', 'r') as file:
